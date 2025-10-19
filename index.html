@@ -1,52 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Recicla Tech</title>
 </head>
+
 <body>
+    <!-- Cabeçalho -->
     <header>
-        <h2>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assets/img/logo.png" alt="Logo da ReciclaTech">
+                <img src="./assets/img/ReciclaTech.png" alt="ReciclaTech">
+            </a>
 
-        </h2>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <button>
+            <nav class="Menu principal">
+                <ul>
+                    <li><a href="#como-funciona">Como Funciona</a></li>
+                    <li><a href="#doar">Doar</a></li>
+                    <li><a href="#adquirir">Adquirir</a></li>
+                </ul>
+            </nav>
 
-        </button>
+            <a href="#comece-agora" class="btn-nav">Começar Agora</a>
+        </div>
     </header>
- 
+
+    <!-- Conteúdo principal -->
     <main>
-        <section>
-            <h1></h1>
-            <p></p>
-            <button></button>
-            <button></button>
-            <img src="" alt="">
-        </section>
 
-        <section>
-            <div>
-                <h2></h2>
-                <p></p>
-            </div>
-            
-            <div>
-                <h2></h2>
-                <p></p>
-            </div>
+        <!-- Start section -->
+        <section id="inicio">
+            <div class="container hero">
+                <div class="texto">
+                    <h1>Dê uma segunda vida aos seus eletrônicos!</h1>
+                    <h4>Conectamos pessoas que querem doar eletrônicos em bom estado com quem precisa deles. Simples, gratuito e
+                        sustentável!</h4>
 
-            <div>
-                <h2></h2>
-                <p></p>
+                        <div class="botoes">
+                            <a href="#doar" class="btn-primary">Quero doar <img src="./assets/icon/ICON1.png" 
+                                alt="imagem do botão Quero doar"></a>
+                            <a href="#adquirir" class="btn-secondary blue">Quero Adquirir <img src="./assets/icon/ICON2.png"
+                                alt="Imagem do botão Quero Adiquirir"></a>
+                        </div>
+                </div>
+
+                <figure class="imagem-hero">
+                <img src="./assets/img/reciclagem.png" alt="Símbolo de reciclagem formado por placas eletrônicas">
+                </figure>
             </div>
         </section>
 
-        
+        <!-- Métricas -->
+        <section id="metricas">
+            <div class="container metricas">
+
+                <article>
+                    <h2>2.5k+</h2>
+                    <p>Eletrônicos doados</p>
+                </article>
+
+                <article>
+                    <h2>1.8k+</h2>
+                    <p>Famílias beneficiadas</p>
+                </article>
+
+                <article>
+                    <h2>95%</h2>
+                    <p>Satisfação dos usuários</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Como Funciona -->
+        <section id="como-funciona">
+            <div class="container">
+                <h2 id="titulo-como-funciona">Como funciona? </h2>
+                <h3 id="sub-titulo-como-funciona">É mais fácil que trocar a pilha do controle! </h3>
+
+                <div class="cards-como-funciona">
+                    <article class="card doadores">
+                        <div class="cabecalho">
+                            <img src="./assets/icon/Doadores.png" alt="">
+                            <h3>Para Doadores</h3>
+                        </div>
+                        <p>Transforme seu "lixo eletrônico" no tesouro de alguém</p>
+
+                        <ol>
+                            <li>
+                                <strong>Cadastre seu eletrônico</strong><br>
+                                Tire umas fotos, descreva o estado e pronto!
+                            </li>
+                            <li>
+                                <strong>Aguarde o match</strong><br>
+                                Alguém vai se interessar pelo seu item.
+                            </li>
+                            <li>
+                                <strong>Combine a entrega</strong><br>
+                                Vocês decidem como fazer a entrega.
+                            </li>
+                        </ol>
+                    </article>
+
+                    <article class="card adquirentes">
+                        <div class="cabecalho">
+                            <img src="./assets/icon/Adquirentes.png" alt="">
+                            <h3>Para Adquirentes</h3>
+                        </div>
+                        <p>Encontre o eletrônico dos seus sonhos de graça</p>
+                        
+                        <ol>
+                            <li>
+                                <strong>Explore os itens</strong><br>
+                                Navegue pelos eletrônicos disponíveis.
+                            </li>
+                            <li>
+                                <strong>Demonstrar interesse</strong><br>
+                                Clique em “Tenho interesse” no item.
+                            </li>
+                            <li>
+                                <strong>Receba seu novo gadget</strong>
+                                <br>Combine com o doador e seja feliz!
+                            </li>
+                        </ol>
+                    </article>
+                </div>
+            </div>
+        </section>
+
     </main>
-    
+
 </body>
+
 </html>
