@@ -1,10 +1,339 @@
+/* ===========================
+   RESET CSS
+=========================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
-    background-color: #000;
-    color: #fff;
+  font-family: 'Inter', sans-serif;
+  color: #1E1E1E;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* Remover estilos padrão */
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* ===========================
+   VARIÁVEIS GERAIS
+=========================== */
+:root {
+  --verde: #16A34A;
+  --verde-claro: #21C05C;
+  --azul: #2563EB;
+  --cinza: #E5E5E5;
+  --cinza-escuro: #4B5563;
+  --branco: #F0FDF4;
+  --preto: #1F2937;
+  --radius: 0.8rem;
+  --transition: 0.3s ease;
+  --container: 90%;
+  --max-width: 1200px;
+}
+
+/* ===========================
+   CONTAINER GERAL
+=========================== */
+.container {
+  width: var(--container);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+  background: var(--branco);
+  border-bottom: 1px solid var(--cinza);
+  padding: 1.6rem 0;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.logo img {
+  width: 140px;
+  height: auto;
+}
+
+.menu-principal ul {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.menu-principal a {
+  font-size: 1.5rem;
+  color: var(--preto);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.menu-principal a:hover {
+  color: var(--verde);
+}
+
+.btn-nav {
+  background: var(--verde);
+  color: var(--branco);
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 1rem 2.4rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.btn-nav:hover {
+  background: var(--verde-claro);
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 0;
+  gap: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--preto);
+}
+
+.hero h4 {
+  font-size: 1.6rem;
+  color: var(--cinza-escuro);
+  max-width: 60ch;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1.2rem 2.4rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--verde);
+  color: var(--branco);
+}
+
+.btn-primary:hover {
+  background: var(--verde-claro);
+}
+
+.btn-secondary {
+  background: var(--branco);
+  border: 2px solid var(--azul);
+  color: var(--azul);
+}
+
+.btn-secondary:hover {
+  background: var(--azul);
+  color: var(--branco);
+}
+
+.imagem-hero img {
+    width:26rem;
+    margin-top:1.6rem
+}
+
+/* ===========================
+   MÉTRICAS
+=========================== */
+.metricas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.metricas article {
+  flex: 1;
+}
+
+.metricas h2 {
+  font-size: 2.4rem;
+  color: var(--verde);
+  font-weight: 800;
+}
+
+.metricas p {
+  font-size: 1.4rem;
+  color: var(--cinza-escuro);
+}
+
+/* ===========================
+   COMO FUNCIONA
+=========================== */
+
+
+/* ===========================
+   PRODUTOS
+=========================== */
+
+
+/* ===========================
+   DEPOIMENTOS
+=========================== */
+
+
+/* ===========================
+   CTA FINAL
+=========================== */
+#cta {
+  padding: 6rem 0;
+  background: #F8FAFC;
+  text-align: center;
+}
+
+#titulo-cta {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+#cta h3 {
+  font-size: 1.6rem;
+  color: var(--cinza-escuro);
+  margin: 1rem 0 2rem;
+}
+
+/* ===========================
+   RODAPÉ
+=========================== */
+footer {
+  background: #0F172A;
+  color: var(--branco);
+  font-size: 1.4rem;
+}
+
+.rodape {
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sobre {
+  text-align: center;
+}
+
+.sobre img {
+  width: 140px;
+  margin: 0 auto 1rem;
+}
+
+.nav-footer {
+  text-align: center;
+}
+
+.nav-footer h4 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.nav-footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.redes {
+  text-align: center;
+}
+
+.redes ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.redes ul img {
+  width: 26px;
+  height: 26px;
+}
+
+.copy {
+  border-top: 1px solid #334155;
+  text-align: center;
+  padding: 1.6rem 0;
+  font-size: 1.2rem;
+}
+
+/* ===========================
+   MEDIA QUERY DESKTOP
+=========================== */
+@media (min-width: 768px) {
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  .metricas {
+    justify-content: space-around;
+  }
+
+  .rodape {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .redes ul {
+    justify-content: flex-start;
+  }
+
+  .copy {
+    text-align: center;
+  }
 }
