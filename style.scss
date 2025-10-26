@@ -299,6 +299,7 @@ header .container {
   color: var(--text)
 }
 
+// Para gerar os numeros
 .card ol li::before {
   content: counter(passo);
   position: absolute;
@@ -329,7 +330,68 @@ header .container {
 /* ===========================
    PRODUTOS
 =========================== */
+#produtos {
+  padding: 5rem 0;
+  background: var(--card);
+  text-align: center;
+}
 
+#titulo-produtos {
+  color: var(--title);
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
+}
+
+#produtos h3 {
+  color: var(--text);
+  font-size: 1.4rem;
+  margin-bottom: 2.4rem
+}
+
+.lista-produtos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+  grid-auto-rows: 1fr;
+  place-items: center;
+}
+
+.produto {
+  background: #fff;
+  border: 2px solid var(--green);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 27rem;
+  height: 100%;
+  width: 33rem;
+}
+
+.produto img {
+  margin-bottom: 1rem;
+}
+
+.produto figcaption {
+  font-weight: 700;
+  text-align: center;
+  color: var(--title);
+  margin-bottom: .6rem;
+}
+
+.produto p {
+  color: var(--text);
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem
+}
+
+.produto .btn-primary {
+  padding: .8rem 1.6rem;
+  font-size: 1.4rem;
+  align-self: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 
 /* ===========================
    DEPOIMENTOS
