@@ -388,6 +388,36 @@ header .container {
 /* ===========================
    DEPOIMENTOS
 =========================== */
+#depoimentos {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+#titulo-depoimentos {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.cards-depoimentos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.depoimento {
+  background: var(--branco);
+  border: 1px solid var(--cinza);
+  border-radius: 0.8rem;
+  padding: 2rem;
+  text-align: left;
+}
+
+.depoimento p {
+  font-size: 1.4rem;
+  margin: 1.4rem 0;
+}
+
 /* ===========================
    CTA FINAL
 =========================== */
