@@ -549,10 +549,6 @@ footer {
     justify-content: space-between;
   }
   /* hero horizontal */
-  #inicio {
-    min-height: calc(100vh - var(--header-h-desktop));
-    padding: 6rem 0;
-  }
   .hero {
     flex-direction: row;
     align-items: center;

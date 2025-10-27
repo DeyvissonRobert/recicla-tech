@@ -566,10 +566,12 @@ footer {
 
 
   /* hero horizontal */
-  #inicio {
-    min-height: calc(100vh - var(--header-h-desktop));
-    padding: 6rem 0;
-  }
+  // #inicio {
+  //   min-height: calc(100vh - var(--header-h-desktop));
+  //   padding: 6rem 0;
+  //   display: flex;
+  //   align-items: center;
+  // }
 
   .hero {
     flex-direction: row;
