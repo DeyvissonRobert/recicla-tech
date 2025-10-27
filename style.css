@@ -10,18 +10,20 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%;
+  /* 1rem = 10px */
 }
 
 body {
   font-family: "Inter", sans-serif;
-  color: #1E1E1E;
+  color: #1e1e1e;
   background-color: #fff;
   line-height: 1.6;
 }
 
 /* Remover estilos padrão */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -40,29 +42,39 @@ img {
    VARIÁVEIS GERAIS
 =========================== */
 :root {
-  --verde: #16A34A;
-  --verde-claro: #21C05C;
-  --azul: #2563EB;
-  --cinza: #E5E5E5;
-  --cinza-escuro: #4B5563;
-  --branco: #F0FDF4;
-  --preto: #1F2937;
+  --verde: #16a34a;
+  --verde-claro: #21c05c;
+  --azul: #2563eb;
+  --cinza: #e5e5e5;
+  --cinza-escuro: #4b5563;
+  --branco: #f0fdf4;
+  --preto: #1f2937;
   --transition: 0.3s ease;
   --container: 90%;
   --max-width: 768px;
-  --bg:#F0FDF4;
-  --card:#F3F5F8;
-  --title:#1F2937;
-  --text:#4B5563;
-  --green:#16A34A;
-  --green-hover:#21C05C;
-  --blue:#2563EB;
-  --footer-bg:#1F2937;
-  --footer-txt:#9CA3AF;
-  --line-footer:#4B5563;
-  --radius:7rem;
-  --header-h-mobile:8rem;
-  --header-h-desktop:10rem;
+  --bg: #f0fdf4;
+  --card: #f3f5f8;
+  --title: #1f2937;
+  --text: #4b5563;
+  --green: #16a34a;
+  --green-hover: #21c05c;
+  --blue: #2563eb;
+  --footer-bg: #1f2937;
+  --footer-txt: #9ca3af;
+  --line-footer: #4b5563;
+  --radius: 7rem;
+  --header-h-desktop: 10rem;
+}
+
+/* ===========================
+   UTILITIES 
+=========================== */
+.poppis {
+  font-family: "Poppins", sans-serif;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
 }
 
 /* ===========================
@@ -79,7 +91,7 @@ img {
 =========================== */
 header {
   background: transparent;
-  border-bottom: 1px solid #B4AEAE;
+  border-bottom: 1px solid #b4aeae;
   padding: 1.6rem 0 1rem;
   margin: 0 2.5rem;
 }
@@ -423,7 +435,7 @@ header .container {
 =========================== */
 #cta {
   padding: 6rem 0;
-  background: #F8FAFC;
+  background: #f8fafc;
   text-align: center;
 }
 
@@ -442,7 +454,7 @@ header .container {
    RODAPÉ
 =========================== */
 footer {
-  background: #0F172A;
+  background: #0f172a;
   color: var(--branco);
   font-size: 1.4rem;
 }
@@ -508,6 +520,7 @@ footer {
   .container {
     max-width: 90vw;
   }
+  /* header */
   header {
     padding: 3rem 0 1rem;
     display: flex;
@@ -535,14 +548,69 @@ footer {
     text-align: left;
     justify-content: space-between;
   }
-  .metricas {
-    justify-content: space-around;
+  /* hero horizontal */
+  #inicio {
+    min-height: calc(100vh - var(--header-h-desktop));
+    padding: 6rem 0;
   }
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 3.2rem;
+  }
+  .hero .texto {
+    flex: 1;
+    padding-right: 3.2rem;
+  }
+  .imagem-hero {
+    flex: 0 0 42rem;
+    display: flex;
+    justify-content: center;
+  }
+  .imagem-hero img {
+    width: 100%;
+  }
+  .botoes {
+    flex-direction: row;
+  }
+  /* como funciona - two columns */
+  .cards-como-funciona {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2.4rem;
+  }
+  .card {
+    max-width: 47%;
+  }
+  /* produtos grid 3 cols equal height */
+  .lista-produtos {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+  }
+  .produto {
+    padding: 2rem;
+  }
+  /* depoimentos - 3 columns square */
+  .cards-depoimentos {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+  }
+  .depoimento {
+    padding: 2.4rem;
+  }
+  /* footer desktop: 4 columns  */
   .rodape {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+  }
+  .rodape .nav-footer {
     text-align: left;
+  }
+  .rodape .nav-footer a:hover {
+    color: var(--green-hover);
   }
   .redes ul {
     justify-content: flex-start;
