@@ -42,16 +42,7 @@ img {
    VARIÁVEIS GERAIS
 =========================== */
 :root {
-  --verde: #16a34a;
-  --verde-claro: #21c05c;
-  --azul: #2563eb;
   --cinza: #e5e5e5;
-  --cinza-escuro: #4b5563;
-  --branco: #f0fdf4;
-  --preto: #1f2937;
-  --transition: 0.3s ease;
-  --container: 90%;
-  --max-width: 768px;
   --bg: #f0fdf4;
   --card: #f3f5f8;
   --title: #1f2937;
@@ -59,11 +50,12 @@ img {
   --green: #16a34a;
   --green-hover: #21c05c;
   --blue: #2563eb;
-  --footer-bg: #1f2937;
   --footer-txt: #9ca3af;
-  --line-footer: #4b5563;
   --radius: 7rem;
   --header-h-desktop: 10rem;
+  --transition: 0.3s ease;
+  --container: 90%;
+  --max-width: 768px;
 }
 
 /* ===========================
@@ -129,7 +121,7 @@ header .container {
 
 .btn-nav {
   background: var(--green);
-  color: var(--branco);
+  color: var(--bg);
   font-weight: 400;
   padding: 1rem 1.8rem;
   border-radius: var(--radius);
@@ -147,59 +139,72 @@ header .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 4rem 0;
+  text-align: left;
+  padding: 2rem 0;
   gap: 2rem;
 }
 
 .hero h1 {
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: var(--preto);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--title);
+  margin-bottom: 1rem;
+  line-height: 1.3;
 }
 
 .hero h4 {
-  font-size: 1.6rem;
-  color: var(--cinza-escuro);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text);
   max-width: 60ch;
+  margin-bottom: 3.5rem;
 }
 
 .botoes {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .btn-primary,
 .btn-secondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.8rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding: 1.2rem 2.4rem;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1rem 2rem;
   border-radius: var(--radius);
   transition: var(--transition);
+  width: 15rem;
 }
 
 .btn-primary {
-  background: var(--verde);
-  color: var(--branco);
+  background: var(--green);
+  color: var(--bg);
 }
-
+.btn-primary img {
+  width: 1.5rem;
+}
 .btn-primary:hover {
-  background: var(--verde-claro);
+  background: var(--green-hover);
 }
 
 .btn-secondary {
-  background: var(--branco);
-  border: 2px solid var(--azul);
-  color: var(--azul);
+  background: var(--bg);
+  border: 2px solid var(--blue);
+  color: var(--blue);
 }
-
+.btn-secondary img {
+  width: 1.8rem;
+}
 .btn-secondary:hover {
-  background: var(--azul);
-  color: var(--branco);
+  background: var(--blue);
+  color: var(--bg);
+}
+.btn-secondary:hover img {
+  filter: brightness(10%) invert(100%);
 }
 
 .imagem-hero img {
@@ -224,13 +229,13 @@ header .container {
 
 .metricas h2 {
   font-size: 2.4rem;
-  color: var(--verde);
+  color: var(--green);
   font-weight: 800;
 }
 
 .metricas p {
   font-size: 1.4rem;
-  color: var(--cinza-escuro);
+  color: var(--text);
 }
 
 /* ===========================
@@ -418,7 +423,7 @@ header .container {
 }
 
 .depoimento {
-  background: var(--branco);
+  background: var(--bg);
   border: 1px solid var(--cinza);
   border-radius: 0.8rem;
   padding: 2rem;
@@ -446,7 +451,7 @@ header .container {
 
 #cta h3 {
   font-size: 1.6rem;
-  color: var(--cinza-escuro);
+  color: var(--text);
   margin: 1rem 0 2rem;
 }
 
@@ -455,7 +460,7 @@ header .container {
 =========================== */
 footer {
   background: #0f172a;
-  color: var(--branco);
+  color: var(--bg);
   font-size: 1.4rem;
 }
 
@@ -545,32 +550,32 @@ footer {
   }
   .hero {
     flex-direction: row;
-    text-align: left;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: 6rem 3.5rem 8rem;
   }
-  /* hero horizontal */
-  .hero {
+  .hero h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    max-width: 75%;
+  }
+  .hero h4 {
+    font-size: 1.6rem;
+    max-width: 65%;
+  }
+  .botoes {
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-    gap: 3.2rem;
+    justify-content: left;
   }
-  .hero .texto {
-    flex: 1;
-    padding-right: 3.2rem;
-  }
-  .imagem-hero {
-    flex: 0 0 42rem;
-    display: flex;
-    justify-content: center;
+  .btn-primary,
+  .btn-secondary {
+    width: 20rem;
+    font-size: 1.6rem;
+    padding: 1.5rem 2.5rem;
   }
   .imagem-hero img {
     width: 100%;
   }
-  .botoes {
-    flex-direction: row;
-  }
+  /* hero horizontal */
   /* como funciona - two columns */
   .cards-como-funciona {
     flex-direction: row;
